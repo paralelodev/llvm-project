@@ -120,6 +120,7 @@ const OMPClauseWithPreInit *OMPClauseWithPreInit::get(const OMPClause *C) {
   case OMPC_copyprivate:
   case OMPC_ordered:
   case OMPC_nowait:
+  case OMPC_mode:
   case OMPC_untied:
   case OMPC_mergeable:
   case OMPC_threadprivate:
@@ -218,6 +219,7 @@ const OMPClauseWithPostUpdate *OMPClauseWithPostUpdate::get(const OMPClause *C) 
   case OMPC_copyprivate:
   case OMPC_ordered:
   case OMPC_nowait:
+  case OMPC_mode:
   case OMPC_untied:
   case OMPC_mergeable:
   case OMPC_threadprivate:
@@ -1891,6 +1893,10 @@ void OMPClausePrinter::VisitOMPOrderedClause(OMPOrderedClause *Node) {
 
 void OMPClausePrinter::VisitOMPNowaitClause(OMPNowaitClause *) {
   OS << "nowait";
+}
+
+void OMPClausePrinter::VisitOMPModeClause(OMPModeClause *) {
+  OS << "mode";
 }
 
 void OMPClausePrinter::VisitOMPUntiedClause(OMPUntiedClause *) {

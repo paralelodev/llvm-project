@@ -568,6 +568,8 @@ void OMPClauseProfiler::VisitOMPOrderedClause(const OMPOrderedClause *C) {
 
 void OMPClauseProfiler::VisitOMPNowaitClause(const OMPNowaitClause *) {}
 
+void OMPClauseProfiler::VisitOMPModeClause(const OMPModeClause *) {}
+
 void OMPClauseProfiler::VisitOMPUntiedClause(const OMPUntiedClause *) {}
 
 void OMPClauseProfiler::VisitOMPMergeableClause(const OMPMergeableClause *) {}

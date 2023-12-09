@@ -705,6 +705,23 @@ public:
   Expr *getNumThreads() const { return getStmtAs<Expr>(); }
 };
 
+/// This represents 'mode' clause in the '#pragma omp ...' directive.
+///
+/// \code
+/// #pragma omp parallel mode
+/// \endcode
+/// In this example directive '#pragma omp parallel' has 'mode' clause.
+class OMPModeClause final : public OMPNoChildClause<llvm::omp::OMPC_mode> {
+public:
+  /// Build 'mode' clause.
+  ///
+  /// \param StartLoc Starting location of the clause.
+  /// \param EndLoc Ending location of the clause.
+  OMPModeClause(SourceLocation StartLoc = SourceLocation(),
+                SourceLocation EndLoc = SourceLocation())
+      : OMPNoChildClause(StartLoc, EndLoc) {}
+};
+
 /// This represents 'safelen' clause in the '#pragma omp ...'
 /// directive.
 ///

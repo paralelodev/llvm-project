@@ -47,6 +47,9 @@ def OMPC_NumThreads : Clause<"num_threads"> {
   let clangClass = "OMPNumThreadsClause";
   let flangClass = "ScalarIntExpr";
 }
+def OMPC_Mode : Clause<"mode"> {
+  let clangClass = "OMPModeClause";
+}
 def OMPC_SafeLen : Clause<"safelen"> {
   let clangClass = "OMPSafelenClause";
   let flangClass = "ScalarIntConstantExpr";

@@ -10255,6 +10255,9 @@ OMPClause *OMPClauseReader::readClause() {
   case llvm::omp::OMPC_nowait:
     C = new (Context) OMPNowaitClause();
     break;
+  case llvm::omp::OMPC_mode:
+    C = new (Context) OMPModeClause();
+    break;
   case llvm::omp::OMPC_untied:
     C = new (Context) OMPUntiedClause();
     break;
@@ -10651,6 +10654,8 @@ void OMPClauseReader::VisitOMPDetachClause(OMPDetachClause *C) {
 }
 
 void OMPClauseReader::VisitOMPNowaitClause(OMPNowaitClause *) {}
+
+void OMPClauseReader::VisitOMPModeClause(OMPModeClause *) {}
 
 void OMPClauseReader::VisitOMPUntiedClause(OMPUntiedClause *) {}
 

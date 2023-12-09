@@ -3363,6 +3363,11 @@ bool RecursiveASTVisitor<Derived>::VisitOMPNowaitClause(OMPNowaitClause *) {
 }
 
 template <typename Derived>
+bool RecursiveASTVisitor<Derived>::VisitOMPModeClause(OMPModeClause *) {
+  return true;
+}
+
+template <typename Derived>
 bool RecursiveASTVisitor<Derived>::VisitOMPUntiedClause(OMPUntiedClause *) {
   return true;
 }

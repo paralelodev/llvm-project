@@ -2388,6 +2388,8 @@ void OMPClauseEnqueue::VisitOMPDetachClause(const OMPDetachClause *C) {
 
 void OMPClauseEnqueue::VisitOMPNowaitClause(const OMPNowaitClause *) {}
 
+void OMPClauseEnqueue::VisitOMPModeClause(const OMPModeClause *) {}
+
 void OMPClauseEnqueue::VisitOMPUntiedClause(const OMPUntiedClause *) {}
 
 void OMPClauseEnqueue::VisitOMPMergeableClause(const OMPMergeableClause *) {}
